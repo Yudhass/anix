@@ -1,0 +1,209 @@
+body {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.sidebar {
+  width: 80px;
+  position: fixed;
+  height: 100vh;
+  background-color: #242424;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+  z-index: 1020;
+}
+
+.nav-link.active {
+  background-color: #3897f0;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active i {
+  color: #ffffff;
+}
+
+.main-content {
+  margin-left: 80px;
+  transition: margin 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+.navbar {
+  background-color: #242424 !important;
+}
+
+.search-form {
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    margin: 0 10px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.8rem;
+}
+
+.nav-link i {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.video-card {
+  background-color: #242424;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+  background-color: #333;
+  overflow: hidden;
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.video-title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.video-info {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.verified-badge {
+  color: #3897f0;
+  margin-left: 5px;
+}
+
+#menuToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+}
+
+/* Adjust card sizes for different screens */
+@media (max-width: 576px) {
+  .video-title {
+    font-size: 0.9rem;
+  }
+
+  .video-info {
+    font-size: 0.7rem;
+  }
+}
+
+/* Card grid adjustments */
+@media (max-width: 768px) {
+  .row {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+
+  .col-6 {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .video-card {
+    margin-bottom: 16px;
+  }
+
+  .card-body {
+    padding: 8px;
+  }
+
+  .video-title {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+  }
+
+  .video-info {
+    font-size: 0.7rem;
+  }
+
+  .duration {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+  }
+}
+
+/* Fix search form on mobile */
+@media (max-width: 576px) {
+  .search-form {
+    display: none;
+    /* Tetap disembunyikan awalnya */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 1050;
+    background-color: #242424;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .search-form.show {
+    display: block;
+  }
+
+  .container-fluid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
