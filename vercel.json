@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/video/:id/:slug",
+      "destination": "/index.html"
+    }
+  ]
+}
