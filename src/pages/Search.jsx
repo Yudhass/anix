@@ -1,6 +1,6 @@
 import "../assets/index.css"; 
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import Header from '../components/user/Header';
+import Sidebar from '../components/user/Sidebar';
 
 const Search = () => {
   return (

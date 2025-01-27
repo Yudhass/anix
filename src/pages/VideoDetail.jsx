@@ -1,7 +1,7 @@
 import "../assets/detailVideo.css";
 // import { useParams } from "react-router-dom";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import Header from "../components/user/Header";
+import Sidebar from "../components/user/Sidebar";
 
 const VideoDetail = () => {
 //   const { id, slug } = useParams();
